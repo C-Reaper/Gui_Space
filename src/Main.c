@@ -169,7 +169,7 @@ void Update(AlxWindow* w){
 	Ship_Update(&Me,w->ElapsedTime);
 
 	TransformedView_HandlePanZoom(&tv,window.Strokes,(Vec2){ GetMouse().x,GetMouse().y });
-	Rect Screen = TransformedView_Rect(&tv,(Rect){ 0.0f,0.0f,GetWidth(),GetHeight() });
+	Rect Screen = TransformedView_ScreenWorldRect(&tv,(Rect){ 0.0f,0.0f,GetWidth(),GetHeight() });
 	size_t ObjectCount = 0;
 	
 	Clear(BLACK);
